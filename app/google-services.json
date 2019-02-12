@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "51157540688",
+    "firebase_url": "https://tecstore-bc608.firebaseio.com",
+    "project_id": "tecstore-bc608",
+    "storage_bucket": "tecstore-bc608.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51157540688:android:a4d2ea87745c3245",
+        "android_client_info": {
+          "package_name": "itesm.com.tecstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51157540688-39abc78il5e5k33dqmu735rteeob3igh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "itesm.com.tecstore",
+            "certificate_hash": "5ae582070225802d9f31e1ac47ab04ebcfcbd480"
+          }
+        },
+        {
+          "client_id": "51157540688-khobcgm299n3hndckro0m66e9bo3knl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKUlhX4J0qW4xflUaESqsc3SqSTOonEY0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51157540688-khobcgm299n3hndckro0m66e9bo3knl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
