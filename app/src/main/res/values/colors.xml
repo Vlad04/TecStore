@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="transparent">#00000000</color>
-    <color name="color_Registro">#239dd7</color>
+
 
     <color name="bg_login">#26ae90</color>
     <color name="bg_register">#2e3237</color>
@@ -19,4 +15,37 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
+
+    <color name="guillotine_background">#444153</color>
+    <color name="guillotine_background_dark">#383547</color>
+    <color name="selected_item_color">#30d1d5</color>
+
+    <color name="colorPrimary">#0091ca</color>
+    <color name="color_Registro">#239dd7</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorSelectedSearchJob">#9dcff5</color>
+    <color name="colorCardDescription">#e8e3e3</color>
+    <color name="colorTextCardDescription">#1e9dd4</color>
+    <color name="colorblack">#D9000000</color>
+
+
+    <color name="switchTrack">#ffd600</color>
+    <color name="switchTrackDisable">#90caf9</color>
+    <color name="switchTrackActive">#1565c0</color>
+    <color name="switchTrackNormal">#90caf9</color>
+    <color name="switchThumbBgActive">#1b5e20</color>
+    <color name="switchThumbActive">#ad1457</color>
+    <color name="switchThumbkNormal">#64b5f6</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="galleryBG">#F3F3F3</color>
+    <color name="shadow">#66000000</color>
+    <color name="textButtonDescubre">#0591c9</color>
+    <color name="navBar">#FF000000</color>
+    <color name="grayMessages">#848484</color>
+    <color name="red">#ff0000</color>
+    <color name="colorTransBg">#26000000</color>
 </resources>

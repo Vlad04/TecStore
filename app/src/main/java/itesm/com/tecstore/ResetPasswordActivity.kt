@@ -20,7 +20,6 @@ class ResetPasswordActivity : AppCompatActivity() {
 
     private var inputEmail: EditText? = null
     private var btnReset: Button? = null
-    private var btnBack: Button? = null
     private var auth: FirebaseAuth? = null
     private var progressBar: ProgressBar? = null
 
@@ -30,18 +29,16 @@ class ResetPasswordActivity : AppCompatActivity() {
 
         inputEmail = findViewById<EditText>(R.id.email) as EditText
         btnReset = findViewById<Button>(R.id.btn_reset_password) as Button
-        btnBack = findViewById<Button>(R.id.btn_back) as Button
         progressBar = findViewById<ProgressBar>(R.id.progressBar) as ProgressBar
 
         auth = FirebaseAuth.getInstance()
 
-        btnBack!!.setOnClickListener { finish() }
 
         btnReset!!.setOnClickListener(View.OnClickListener {
             val email = inputEmail!!.text.toString().trim { it <= ' ' }
 
             if (TextUtils.isEmpty(email)) {
-                Toast.makeText(application, "Enter your registered email id", Toast.LENGTH_SHORT).show()
+                Toast.makeText(application, R.string.enter_email, Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
 
@@ -49,9 +46,9 @@ class ResetPasswordActivity : AppCompatActivity() {
             auth!!.sendPasswordResetEmail(email)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            Toast.makeText(this@ResetPasswordActivity, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@ResetPasswordActivity, R.string.email_sent, Toast.LENGTH_SHORT).show()
                         } else {
-                            Toast.makeText(this@ResetPasswordActivity, "Failed to send reset email!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@ResetPasswordActivity, "Error", Toast.LENGTH_SHORT).show()
                         }
 
                         progressBar!!.visibility = View.GONE

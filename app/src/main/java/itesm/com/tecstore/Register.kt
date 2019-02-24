@@ -50,17 +50,17 @@ class Register : AppCompatActivity() {
             val password = inputPassword!!.text.toString().trim { it <= ' ' }
 
             if (TextUtils.isEmpty(email)) {
-                Toast.makeText(applicationContext, "Enter email address!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.enter_email, Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
 
             if (TextUtils.isEmpty(password)) {
-                Toast.makeText(applicationContext, "Enter password!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.enter_password, Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
 
             if (password.length < 6) {
-                Toast.makeText(applicationContext, "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.min_characters, Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
 
@@ -68,14 +68,11 @@ class Register : AppCompatActivity() {
             //create user
             auth!!.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this@Register) { task ->
-                        Toast.makeText(this@Register, "createUserWithEmail:onComplete:" + task.isSuccessful, Toast.LENGTH_SHORT).show()
                         progressBar!!.visibility = View.GONE
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful) {
-                            Toast.makeText(this@Register, "Authentication failed." + task.exception!!,
-                                    Toast.LENGTH_SHORT).show()
                         } else {
                             startActivity(Intent(this@Register, MainActivity::class.java))
                             finish()

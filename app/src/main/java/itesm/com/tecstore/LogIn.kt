@@ -61,16 +61,16 @@ class LogIn : AppCompatActivity() {
         btnReset!!.setOnClickListener { startActivity(Intent(this@LogIn, ResetPasswordActivity::class.java)) }
 
         btnLogin!!.setOnClickListener(View.OnClickListener {
-            val email = inputEmail!!.text.toString()
-            val password = inputPassword!!.text.toString()
+            val email = inputEmail!!.text.toString().trim()
+            val password = inputPassword!!.text.toString().trim()
 
             if (TextUtils.isEmpty(email)) {
-                Toast.makeText(applicationContext, "Enter email address!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.enter_email, Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
 
             if (TextUtils.isEmpty(password)) {
-                Toast.makeText(applicationContext, "Enter password!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.enter_password, Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
 
