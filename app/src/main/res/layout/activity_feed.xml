@@ -20,7 +20,17 @@
             android:layout_marginBottom="5dp"
             app:layout_scrollFlags="scroll|enterAlways"
             android:orientation="horizontal">
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/perfilImage_feed"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center|bottom"
+                android:src="@drawable/user" />
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -53,12 +63,118 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.view.ViewPager
+    <ScrollView
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:background="#FFFFFF"
         android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/playera1"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/articulo_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/playera_tec" />
+            <ImageView
+                android:id="@+id/peluche1"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/peluche"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toEndOf="@id/playera1"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/gorra1"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/gorra"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/playera1" />
+
+            <ImageView
+                android:id="@+id/termo"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/termo"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toEndOf="@id/gorra1"
+                app:layout_constraintTop_toBottomOf="@id/peluche1"/>
+
+            <ImageView
+                android:id="@+id/bufandas"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/bufanda"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gorra1" />
+
+            <ImageView
+                android:id="@+id/sudadera"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/sudadera"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toEndOf="@id/bufandas"
+                app:layout_constraintTop_toBottomOf="@id/termo"/>
+
+            <ImageView
+                android:id="@+id/mochila"
+                android:layout_width="190dp"
+                android:layout_height="160dp"
+                android:src="@drawable/mochila"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bufandas" />
+
+            <ImageView
+                android:id="@+id/cuadernos"
+                android:layout_width="190dp"
+                android:layout_height="160dp"
+                android:src="@drawable/cuaderno"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintStart_toEndOf="@id/mochila"
+                app:layout_constraintTop_toBottomOf="@id/sudadera"/>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                app:layout_constraintTop_toBottomOf="@id/cuadernos"></android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
 
 
 </android.support.design.widget.CoordinatorLayout>
