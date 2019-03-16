@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/myAppliedPosts_title"
+                    android:text="@string/clothe"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout33"
@@ -156,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/searchJob_title"
+                    android:text="@string/gifts"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout63"
@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/savedPublications_title"
+                    android:text="@string/tech"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout36"
@@ -224,7 +224,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/bookmark_2" />
+                    app:srcCompat="@drawable/technology" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout36"
@@ -256,7 +256,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/recommendedJobs_title"
+                    android:text="@string/bags"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout38"
@@ -274,7 +274,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/worldwide_2" />
+                    app:srcCompat="@drawable/bag" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout38"
@@ -306,7 +306,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/myNetwork_title"
+                    android:text="@string/books"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout40"
@@ -324,7 +324,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/earth_globe" />
+                    app:srcCompat="@drawable/book" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout40"
@@ -344,7 +344,7 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/socialNetworks_title"
+                android:text="@string/redes_sociales"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -392,7 +392,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:text="@string/linkFacebook_title"
+                        android:text="@string/facebook"
                         android:textColor="#4a4a4a"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toTopOf="@+id/constraintLayout54"
@@ -410,7 +410,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/enlace" />
+                        app:srcCompat="@drawable/facebook" />
 
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/constraintLayout54"
@@ -432,7 +432,7 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/extra_title"
+                android:text="@string/extra"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -457,7 +457,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/termsConditions_title"
+                    android:text="@string/terms"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout42"
@@ -475,7 +475,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/file" />
+                    app:srcCompat="@drawable/terms_conditions" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout42"
@@ -519,7 +519,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/contact_title"
+                    android:text="@string/contact"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout45"
@@ -537,7 +537,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_phone_book2" />
+                    app:srcCompat="@drawable/contacting" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout45"
@@ -569,7 +569,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/frequentQuestions_title"
+                    android:text="@string/faqs"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout47"
@@ -587,7 +587,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/question" />
+                    app:srcCompat="@drawable/faqs" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout47"
@@ -601,55 +601,6 @@
                 </android.support.constraint.ConstraintLayout>
             </android.support.constraint.ConstraintLayout>
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/blogConstraintLayout"
-                android:layout_width="0dp"
-                android:background="@drawable/ripple_effect"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/frequentQuestionsConstraintLayout">
-
-                <TextView
-                    android:id="@+id/blogTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/blog_title"
-                    android:textColor="#4a4a4a"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout49"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/blogImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/blogImageView"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_blog_nextline" />
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/constraintLayout49"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="#ededed"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                </android.support.constraint.ConstraintLayout>
-            </android.support.constraint.ConstraintLayout>
 
             <TextView
                 android:id="@+id/textView42"
@@ -657,13 +608,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="27dp"
-                android:text="@string/facebook_title"
+                android:text="@string/facebook"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:visibility="gone"
                 app:layout_constraintStart_toEndOf="@+id/imageView6"
-                app:layout_constraintTop_toBottomOf="@+id/blogConstraintLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/frequentQuestionsConstraintLayout" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -673,7 +624,7 @@
                 android:layout_marginTop="24dp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blogConstraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/frequentQuestionsConstraintLayout"
                 app:srcCompat="@drawable/facebook" />
 
             <android.support.constraint.ConstraintLayout
@@ -689,56 +640,6 @@
 
             </android.support.constraint.ConstraintLayout>
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/friendsConstraintLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ripple_effect"
-                android:clickable="true"
-                android:focusable="true"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout50">
-
-                <TextView
-                    android:id="@+id/friendsTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/facebookFriends_title"
-                    android:textColor="#4a4a4a"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout52"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/friendsImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/friendsImageView"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/usuarios" />
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/constraintLayout52"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="#ededed"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                </android.support.constraint.ConstraintLayout>
-            </android.support.constraint.ConstraintLayout>
 
             <!--<android.support.constraint.ConstraintLayout
                 android:id="@+id/linkAccountConstraintLayout"
@@ -790,56 +691,6 @@
                 </android.support.constraint.ConstraintLayout>
             </android.support.constraint.ConstraintLayout>-->
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/inviteFriendsConstraintLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ripple_effect"
-                android:clickable="true"
-                android:focusable="true"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/blogConstraintLayout">
-
-                <TextView
-                    android:id="@+id/inviteFriendsTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/inviteFacebook_title"
-                    android:textColor="#4a4a4a"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout56"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/inviteFriendsImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/inviteFriendsImageView"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/googleg_standard_color_18" />
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/constraintLayout56"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="#ededed"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                </android.support.constraint.ConstraintLayout>
-            </android.support.constraint.ConstraintLayout>
 
             <TextView
                 android:id="@+id/textView45"
@@ -847,12 +698,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:text="@string/settings_title"
+                android:text="@string/settings_extra"
                 android:textColor="#4a4a4a"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inviteFriendsConstraintLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/frequentQuestionsConstraintLayout" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout57"
@@ -880,55 +731,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout57">
 
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/accountSettingsConstraintLayout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ripple_effect"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:id="@+id/accountSettingsTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:text="@string/accountSettings_title"
-                        android:textColor="#4a4a4a"
-                        android:textSize="16sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/accountSettingsImageView"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/accountSettingsImageView"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_settings_dark" />
-
-                    <android.support.constraint.ConstraintLayout
-                        android:id="@+id/constraintLayout60"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:background="#ededed"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent">
-
-                    </android.support.constraint.ConstraintLayout>
-                </android.support.constraint.ConstraintLayout>
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/privacySettingsConstraintLayout"
@@ -940,7 +742,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/accountSettingsConstraintLayout">
+                    >
 
                     <TextView
                         android:id="@+id/privacySettingsTextView"
@@ -948,7 +750,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:text="@string/privacySettings_title"
+                        android:text="@string/privacy"
                         android:textColor="#4a4a4a"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -966,7 +768,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_padlock" />
+                        app:srcCompat="@drawable/privacy" />
 
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/constraintLayout62"
@@ -998,7 +800,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:text="@string/logOut_text"
+                        android:text="@string/logout"
                         android:textColor="#4a4a4a"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1018,7 +820,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_logout" />
+                        app:srcCompat="@drawable/logout" />
 
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/constraintLayout64"
