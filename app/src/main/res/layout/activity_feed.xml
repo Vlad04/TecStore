@@ -68,7 +68,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:gravity="center|bottom"
-                app:srcCompat="@drawable/ic_menu" />
+                app:srcCompat="@drawable/ic_menu"
+                tools:ignore="VectorDrawableCompat" />
 
         </LinearLayout>
 
@@ -88,104 +89,540 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/playera1"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:background="@drawable/articulo_background"
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/first_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
-                android:src="@drawable/playera_tec" />
+                tools:ignore="ContentDescription">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/playera1"
+                        android:src="@drawable/playera_tec"
+                        android:layout_width="160dp"
+                        android:layout_height="132dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:paddingBottom="20dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toTopOf="@+id/button_article1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="70dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        tools:layout_editor_absoluteY="144dp"
+                        android:layout_marginEnd="95dp"
+                        android:background="@drawable/price"
+                        android:text="$700"
+                        android:gravity="center"
+                        android:textColor="#000000"
+
+                        app:layout_constraintTop_toBottomOf="@+id/playera1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        android:id="@+id/button_article1"
+                        android:layout_width="70dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="95dp"
+                        android:background="@drawable/buy_button"
+                        android:text="@string/buy"
+                        android:textColor="#21ADE4"
+                        android:textAllCaps="false"
+                        app:layout_constraintTop_toBottomOf="@+id/playera1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/second_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/first_article"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/peluche1"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
                 android:src="@drawable/peluche"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="12dp"
+                android:layout_width="160dp"
+                android:layout_height="132dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
-                app:layout_constraintStart_toEndOf="@id/playera1"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/button_article2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
+               <TextView
+                   android:id="@+id/textView2"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginStart="8dp"
+                   tools:layout_editor_absoluteY="144dp"
+                   android:layout_marginEnd="95dp"
+                   android:background="@drawable/price"
+                   android:text="$200"
+                   android:gravity="center"
+                   android:textColor="#000000"
 
+                   app:layout_constraintTop_toBottomOf="@+id/peluche1"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <Button
+                   android:id="@+id/button_article2"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="95dp"
+                   android:background="@drawable/buy_button"
+                   android:text="@string/buy"
+                   android:textColor="#21ADE4"
+                   android:textAllCaps="false"
+                   app:layout_constraintTop_toBottomOf="@+id/peluche1"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/third_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_article"
+                tools:ignore="ContentDescription">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/gorra1"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
                 android:src="@drawable/gorra"
-                android:layout_marginTop="12dp"
+                android:layout_width="160dp"
+                android:layout_height="132dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/button_article3"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/playera1" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
+               <TextView
+                   android:id="@+id/textView3"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginStart="8dp"
+                   tools:layout_editor_absoluteY="144dp"
+                   android:layout_marginEnd="95dp"
+                   android:background="@drawable/price"
+                   android:text="$400"
+                   android:gravity="center"
+                   android:textColor="#000000"
+
+                   app:layout_constraintTop_toBottomOf="@+id/gorra1"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <Button
+                   android:id="@+id/button_article3"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="95dp"
+                   android:background="@drawable/buy_button"
+                   android:text="@string/buy"
+                   android:textColor="#21ADE4"
+                   android:textAllCaps="false"
+                   app:layout_constraintTop_toBottomOf="@+id/gorra1"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/fourth_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/third_article"
+                app:layout_constraintTop_toBottomOf="@id/second_article"
+                tools:ignore="ContentDescription">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/termo"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:src="@drawable/termo"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
-                app:layout_constraintStart_toEndOf="@id/gorra1"
-                app:layout_constraintTop_toBottomOf="@id/peluche1"/>
 
+                android:src="@drawable/termo"
+                android:layout_width="160dp"
+                android:layout_height="132dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/button_article4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginStart="8dp"
+                   tools:layout_editor_absoluteY="144dp"
+                   android:layout_marginEnd="95dp"
+                   android:background="@drawable/price"
+                   android:text="$200"
+                   android:gravity="center"
+                   android:textColor="#000000"
+
+                   app:layout_constraintTop_toBottomOf="@+id/termo"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <Button
+                   android:id="@+id/button_article4"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="95dp"
+                   android:background="@drawable/buy_button"
+                   android:text="@string/buy"
+                   android:textColor="#21ADE4"
+                   android:textAllCaps="false"
+                   app:layout_constraintTop_toBottomOf="@+id/termo"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/fifth_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_article"
+                tools:ignore="ContentDescription">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/bufandas"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:src="@drawable/bufanda"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/gorra1" />
 
+                android:src="@drawable/bufanda"
+                android:layout_width="160dp"
+                android:layout_height="132dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/button_article5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+               <TextView
+                   android:id="@+id/textView5"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginStart="8dp"
+                   tools:layout_editor_absoluteY="144dp"
+                   android:layout_marginEnd="95dp"
+                   android:background="@drawable/price"
+                   android:text="$150"
+                   android:gravity="center"
+                   android:textColor="#000000"
+
+                   app:layout_constraintTop_toBottomOf="@+id/bufandas"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <Button
+                   android:id="@+id/button_article5"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="95dp"
+                   android:background="@drawable/buy_button"
+                   android:text="@string/buy"
+                   android:textColor="#21ADE4"
+                   android:textAllCaps="false"
+                   app:layout_constraintTop_toBottomOf="@+id/bufandas"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/sixth_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/fifth_article"
+                app:layout_constraintTop_toBottomOf="@id/fourth_article"
+                tools:ignore="ContentDescription">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/sudadera"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:src="@drawable/sudadera"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
-                app:layout_constraintStart_toEndOf="@id/bufandas"
-                app:layout_constraintTop_toBottomOf="@id/termo"/>
 
+                android:src="@drawable/sudadera"
+                android:layout_width="160dp"
+                android:layout_height="132dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/button_article6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+               <TextView
+                   android:id="@+id/textView6"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginStart="8dp"
+                   tools:layout_editor_absoluteY="144dp"
+                   android:layout_marginEnd="95dp"
+                   android:background="@drawable/price"
+                   android:text="$750"
+                   android:gravity="center"
+                   android:textColor="#000000"
+
+                   app:layout_constraintTop_toBottomOf="@+id/sudadera"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <Button
+                   android:id="@+id/button_article6"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="95dp"
+                   android:background="@drawable/buy_button"
+                   android:text="@string/buy"
+                   android:textColor="#21ADE4"
+                   android:textAllCaps="false"
+                   app:layout_constraintTop_toBottomOf="@+id/sudadera"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/seventh_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifth_article"
+                tools:ignore="ContentDescription">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/mochila"
-                android:layout_width="190dp"
-                android:layout_height="160dp"
                 android:src="@drawable/mochila"
-                android:layout_marginTop="12dp"
+                android:layout_width="160dp"
+                android:layout_height="132dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/button_article7"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/bufandas" />
+                app:layout_constraintTop_toTopOf="parent"  />
+               <TextView
+                   android:id="@+id/textView7"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginStart="8dp"
+                   tools:layout_editor_absoluteY="144dp"
+                   android:layout_marginEnd="95dp"
+                   android:background="@drawable/price"
+                   android:text="$800"
+                   android:gravity="center"
+                   android:textColor="#000000"
 
+                   app:layout_constraintTop_toBottomOf="@+id/mochila"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <Button
+                   android:id="@+id/button_article7"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="95dp"
+                   android:background="@drawable/buy_button"
+                   android:text="@string/buy"
+                   android:textColor="#21ADE4"
+                   android:textAllCaps="false"
+                   app:layout_constraintTop_toBottomOf="@+id/mochila"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/eigth_article"
+                style="@style/CardView.Light"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/seventh_article"
+                app:layout_constraintTop_toBottomOf="@id/sixth_article"
+                tools:ignore="ContentDescription">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/cuadernos"
-                android:layout_width="190dp"
-                android:layout_height="160dp"
+
                 android:src="@drawable/cuaderno"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="12dp"
-
+                android:layout_width="160dp"
+                android:layout_height="132dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginBottom="12dp"
-                app:layout_constraintStart_toEndOf="@id/mochila"
-                app:layout_constraintTop_toBottomOf="@id/sudadera"/>
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/button_article8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+               <TextView
+                   android:id="@+id/textView8"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginStart="8dp"
+                   tools:layout_editor_absoluteY="144dp"
+                   android:layout_marginEnd="95dp"
+                   android:background="@drawable/price"
+                   android:text="$100"
+                   android:gravity="center"
+                   android:textColor="#000000"
 
+                   app:layout_constraintTop_toBottomOf="@+id/cuadernos"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+
+               <Button
+                   android:id="@+id/button_article8"
+                   android:layout_width="70dp"
+                   android:layout_height="20dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginStart="95dp"
+                   android:background="@drawable/buy_button"
+                   android:text="@string/buy"
+                   android:textColor="#21ADE4"
+                   android:textAllCaps="false"
+                   app:layout_constraintTop_toBottomOf="@+id/cuadernos"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" />
+           </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="12dp"
-                app:layout_constraintTop_toBottomOf="@id/cuadernos"></android.support.constraint.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@id/eigth_article"></android.support.constraint.ConstraintLayout>
 
         </android.support.constraint.ConstraintLayout>
 
