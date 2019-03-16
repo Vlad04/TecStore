@@ -4,9 +4,14 @@
     <string name="Register_text">REGISTER</string>
     <string name="information_text_1">Live a new experience</string>
     <string name="information_text_2">Enjoy with your friends</string>
-
+    <string name="departamentos">Shop</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="clothe">Clothing</string>
+    <string name="teddie">Teddies</string>
+    <string name="gifts">Gifts</string>
+    
+
 
 
     <string name="email">Email</string>

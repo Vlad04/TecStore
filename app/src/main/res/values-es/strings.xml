@@ -2,11 +2,10 @@
 <resources>
     <string name="app_name">TecStore</string>
     <string name="Login_text">INGRESAR</string>
+    <string name="departamentos">Departamentos</string>
     <string name="Register_text">REGISTRATE</string>
     <string name="information_text_1">Vive una nueva experiencia</string>
     <string name="information_text_2">Disfruta con tus amigos</string>
-
-
     <string name="email">Correo</string>
     <string name="minimum_password">Contraseña muy corta, favor de introducir mínimo 6 caracteres.</string>
     <string name="auth_failed">Autentificación incorrecta, favor de revisar correo y contraseña.</string>

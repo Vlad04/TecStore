@@ -26,7 +26,8 @@
         <activity
             android:name=".Feed_TecStore"
             android:label="@string/title_activity_feed__tec_store"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Menu"></activity>
     </application>
 
 </manifest>
