@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="itesm.com.tecstore.Feed">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#21ADE4"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme">
@@ -44,14 +44,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="15dp"
-                    android:focusable="false"
                     android:backgroundTint="#ffffff"
                     android:textColor="#aaa3a3"
+                    android:focusable="false"
                     android:background="@drawable/searchable_border"
                     android:paddingStart="15dp"
                     android:text="@string/hint_search"
                     android:maxLines="1"
                     android:paddingLeft="30dp" />
+
 
             </RelativeLayout>
 

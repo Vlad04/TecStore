@@ -17,8 +17,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.R.attr.data
 import android.R.attr.data
+import kotlinx.android.synthetic.main.activity_search.*
 
-class Feed : AppCompatActivity() {
+class Search : AppCompatActivity() {
     var count=0
     private val TAG = "MainActivity"
     private var mDatabase: DatabaseReference? = null
@@ -46,14 +47,35 @@ class Feed : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_feed)
-        val configurationButton_feed = findViewById<ImageView>(R.id.configurationButton_feed) as ImageView
-        val buy_button = findViewById<Button>(R.id.button_article1) as Button
+        setContentView(R.layout.activity_search)
+        val list = findViewById<View>(R.id.theList) as ListView
+        adapter1 = ArrayAdapter(this@Search, android.R.layout.simple_list_item_1, data)
+        list.setAdapter(adapter1);
+        list.setTextFilterEnabled(true);
+
+        search_editText_activity.addTextChangedListener(object : TextWatcher {
+
+            override fun onTextChanged(arg0: CharSequence, arg1: Int, arg2: Int, arg3: Int) {
+                // TODO Auto-generated method stub
+                this@Search.adapter1!!.getFilter().filter(arg0)
+            }
+
+            override fun beforeTextChanged(arg0: CharSequence, arg1: Int, arg2: Int,
+                                           arg3: Int) {
+                // TODO Auto-generated method stub
+
+            }
+
+            override fun afterTextChanged(arg0: Editable) {
+                // TODO Auto-generated method stub
+
+            }
+        })
 
 
-
-
-        search_editText!!.setOnClickListener { startActivity(Intent(this@Feed, Search::class.java)) }
+        search_editText_activity.setOnClickListener {
+            list.visibility=View.VISIBLE
+        }
 
 
 
@@ -63,7 +85,7 @@ class Feed : AppCompatActivity() {
 
 
 
-        buy_button.setOnClickListener {
+        /*buy_button!!.setOnClickListener {
             //Crea tabla
             /*mDatabase!!.child("Vladimir").setValue("24")
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
@@ -72,10 +94,9 @@ class Feed : AppCompatActivity() {
             count++
 
             retrieveStuffFromDatabase()
-        }
+        }*/
 
         // set on-click listener
-        configurationButton_feed.setOnClickListener { startActivity(Intent(this@Feed, Menu::class.java)) }
 
     }
 }

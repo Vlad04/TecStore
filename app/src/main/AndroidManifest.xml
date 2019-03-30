@@ -27,7 +27,8 @@
             android:name=".Feed_TecStore"
             android:label="@string/title_activity_feed__tec_store"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Menu"></activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".Search"></activity>
     </application>
 
 </manifest>
