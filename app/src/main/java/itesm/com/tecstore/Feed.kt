@@ -40,7 +40,7 @@ class Feed : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_addcart -> {
-                startActivity(Intent(this@Feed, Search::class.java))
+                startActivity(Intent(this@Feed, ArticleList::class.java))
                 return true
             }
             else -> {
