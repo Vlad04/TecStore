@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppThemeCart">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
             android:name=".Feed_TecStore"
             android:label="@string/title_activity_feed__tec_store"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Menu" />
+        <activity android:name=".Menu_tecstore" />
         <activity android:name=".Search"></activity>
     </application>
 

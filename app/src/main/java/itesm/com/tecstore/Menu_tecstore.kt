@@ -3,7 +3,7 @@ package itesm.com.tecstore
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class Menu : AppCompatActivity() {
+class Menu_tecstore : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
