@@ -108,6 +108,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="wrap_content"
+                    android:id="@+id/constraint_playera"
                     android:layout_height="wrap_content">
 
                     <ImageView
@@ -176,6 +177,7 @@
 
            <android.support.constraint.ConstraintLayout
                android:layout_width="wrap_content"
+               android:id="@+id/constraint_peluche"
                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/peluche1"
@@ -241,6 +243,7 @@
 
            <android.support.constraint.ConstraintLayout
                android:layout_width="wrap_content"
+               android:id="@+id/constraint_gorra"
                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/gorra1"
@@ -307,6 +310,7 @@
 
            <android.support.constraint.ConstraintLayout
                android:layout_width="wrap_content"
+               android:id="@+id/constraint_termo"
                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/termo"
@@ -373,6 +377,7 @@
 
            <android.support.constraint.ConstraintLayout
                android:layout_width="wrap_content"
+               android:id="@+id/constraint_bufanda"
                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/bufandas"
@@ -440,6 +445,8 @@
 
            <android.support.constraint.ConstraintLayout
                android:layout_width="wrap_content"
+               android:id="@+id/constraint_sudadera"
+
                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/sudadera"
@@ -506,6 +513,8 @@
 
            <android.support.constraint.ConstraintLayout
                android:layout_width="wrap_content"
+               android:id="@+id/constraint_mochila"
+
                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/mochila"
@@ -571,6 +580,8 @@
 
            <android.support.constraint.ConstraintLayout
                android:layout_width="wrap_content"
+               android:id="@+id/constraint_libreta"
+
                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/cuadernos"

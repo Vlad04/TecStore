@@ -3,6 +3,7 @@ package itesm.com.tecstore
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
 import android.view.Menu
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_feed.*
@@ -17,6 +18,22 @@ class Feed : AppCompatActivity() {
     var adapter1: ArrayAdapter<String>? = null
     val data = arrayOf("Mochila", "Peluche", "Audifonos", "Playera", "Gorra", "Termo", "Bufanda", "Libreta")
     private var cartCount: Int = 0;
+    var borde_verde_playera = false
+    var borde_verde_peluche = false
+    var borde_verde_cuaderno = false
+    var borde_verde_mochila = false
+    var borde_verde_bufanda = false
+    var borde_verde_termo = false
+    var borde_verde_sudadera = false
+    var borde_verde_gorra = false
+    var playeras_cantidad = 0
+    var gorras_cantidad = 0
+    var peluches_cantidad = 0
+    var cuadernos_cantidad = 0
+    var mochila_cantidad = 0
+    var bufanda_cantidad = 0
+    var termo_cantidad = 0
+    var sudadera_cantidad = 0
 
     private var mMessageReference: DatabaseReference? = null
 // ...
@@ -78,7 +95,14 @@ class Feed : AppCompatActivity() {
         val buy_button_6 = findViewById<Button>(R.id.button_article6) as Button
         val buy_button_7 = findViewById<Button>(R.id.button_article7) as Button
         val buy_button_8 = findViewById<Button>(R.id.button_article8) as Button
-
+        val constraint_playera = findViewById<ConstraintLayout>(R.id.constraint_playera) as ConstraintLayout
+        val constraint_gorra = findViewById<ConstraintLayout>(R.id.constraint_gorra) as ConstraintLayout
+        val constraint_mochila = findViewById<ConstraintLayout>(R.id.constraint_mochila) as ConstraintLayout
+        val constraint_peluche = findViewById<ConstraintLayout>(R.id.constraint_peluche) as ConstraintLayout
+        val constraint_termo = findViewById<ConstraintLayout>(R.id.constraint_termo) as ConstraintLayout
+        val constraint_sudadera = findViewById<ConstraintLayout>(R.id.constraint_sudadera) as ConstraintLayout
+        val constraint_cuaderno = findViewById<ConstraintLayout>(R.id.constraint_libreta) as ConstraintLayout
+        val constraint_bufanda = findViewById<ConstraintLayout>(R.id.constraint_bufanda) as ConstraintLayout
 
 
 
@@ -90,8 +114,6 @@ class Feed : AppCompatActivity() {
         mMessageReference = FirebaseDatabase.getInstance().getReference("Testing")
 
 
-
-
         buy_button_1.setOnClickListener {
             //Crea tabla
             /*mDatabase!!.child("Vladimir").setValue("24")
@@ -100,6 +122,10 @@ class Feed : AppCompatActivity() {
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            playeras_cantidad++
+            constraint_playera.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_playera=true
+            println("borde verde playera click = " + borde_verde_playera)
 
             retrieveStuffFromDatabase()
         }
@@ -109,9 +135,13 @@ class Feed : AppCompatActivity() {
             /*mDatabase!!.child("Vladimir").setValue("24")
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
+            peluches_cantidad++
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            constraint_peluche.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_peluche=true
+
 
             retrieveStuffFromDatabase()
         }
@@ -124,6 +154,10 @@ class Feed : AppCompatActivity() {
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            gorras_cantidad++
+            constraint_gorra.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_gorra=true
+
 
             retrieveStuffFromDatabase()
         }
@@ -136,6 +170,10 @@ class Feed : AppCompatActivity() {
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            termo_cantidad++
+            constraint_termo.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_termo=true
+
 
             retrieveStuffFromDatabase()
         }
@@ -148,6 +186,10 @@ class Feed : AppCompatActivity() {
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            bufanda_cantidad++
+            constraint_bufanda.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_bufanda=true
+
 
             retrieveStuffFromDatabase()
         }
@@ -160,6 +202,10 @@ class Feed : AppCompatActivity() {
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            sudadera_cantidad++
+            constraint_sudadera.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_sudadera=true
+
 
             retrieveStuffFromDatabase()
         }
@@ -172,6 +218,10 @@ class Feed : AppCompatActivity() {
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            mochila_cantidad++
+            constraint_mochila.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_mochila=true
+
 
             retrieveStuffFromDatabase()
         }
@@ -184,9 +234,121 @@ class Feed : AppCompatActivity() {
             CartCounterActionView.setCountStep(this, 1)
             mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
             count++
+            cuadernos_cantidad++
+            constraint_libreta.setBackgroundResource(R.drawable.borde_verde)
+            borde_verde_cuaderno=true
+
 
             retrieveStuffFromDatabase()
         }
+
+
+        constraint_playera.setOnClickListener {
+            println("borde verde playera 1 = " + borde_verde_playera)
+
+            if(borde_verde_playera==true) {
+                println("borde verde playera 2 = " + borde_verde_playera)
+                --cartCount
+                playeras_cantidad--
+                CartCounterActionView.setCountStep(this, -1)
+                if(playeras_cantidad==0) {
+                    constraint_playera.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_playera=false
+                }
+
+            }
+        }
+
+        constraint_peluche.setOnClickListener {
+            if(borde_verde_peluche==true) {
+                peluches_cantidad--
+                --cartCount
+                CartCounterActionView.setCountStep(this, -1)
+                if(peluches_cantidad==0) {
+                    constraint_peluche.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_peluche=false
+                }
+            }
+        }
+
+        constraint_gorra.setOnClickListener {
+            if(borde_verde_gorra==true) {
+                gorras_cantidad--
+                --cartCount
+                CartCounterActionView.setCountStep(this, -1)
+                if(gorras_cantidad==0) {
+                    constraint_gorra.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_gorra=false
+                }
+            }
+        }
+
+        constraint_termo.setOnClickListener {
+            if(borde_verde_termo==true) {
+
+                termo_cantidad--
+                --cartCount
+                CartCounterActionView.setCountStep(this, -1)
+                if(termo_cantidad==0) {
+                    constraint_termo.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_termo=false
+                }
+            }
+        }
+
+        constraint_bufanda.setOnClickListener {
+            if(borde_verde_bufanda==true) {
+
+                bufanda_cantidad--
+                --cartCount
+                CartCounterActionView.setCountStep(this, -1)
+                if(bufanda_cantidad==0) {
+                    constraint_bufanda.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_bufanda=false
+                }
+            }
+        }
+
+        constraint_sudadera.setOnClickListener {
+            if(borde_verde_sudadera==true) {
+
+                sudadera_cantidad--
+                --cartCount
+                CartCounterActionView.setCountStep(this, -1)
+                if(sudadera_cantidad==0) {
+                    constraint_sudadera.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_sudadera=false
+                }
+            }
+        }
+
+        constraint_mochila.setOnClickListener {
+            if(borde_verde_mochila==true) {
+
+                mochila_cantidad--
+                constraint_mochila.setBackgroundResource(R.drawable.borde_gris)
+                --cartCount
+                CartCounterActionView.setCountStep(this, -1)
+                if(mochila_cantidad==0) {
+                    constraint_mochila.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_mochila=false
+                }
+            }
+        }
+
+        constraint_libreta.setOnClickListener {
+            if(borde_verde_cuaderno==true) {
+                cuadernos_cantidad--
+                --cartCount
+                CartCounterActionView.setCountStep(this, -1)
+                if(cuadernos_cantidad==0) {
+                    constraint_libreta.setBackgroundResource(R.drawable.borde_gris)
+                    borde_verde_cuaderno=false
+                }
+            }
+        }
+
+
 
         // set on-click listener
         configurationButton_feed.setOnClickListener { startActivity(Intent(this@Feed, Menu_tecstore::class.java)) }
