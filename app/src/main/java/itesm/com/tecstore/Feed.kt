@@ -9,6 +9,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_feed.*
 import android.view.MenuItem
 import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
 import com.rowland.cartcounter.view.CartCounterActionView
 
 class Feed : AppCompatActivity() {
@@ -34,6 +35,7 @@ class Feed : AppCompatActivity() {
     var bufanda_cantidad = 0
     var termo_cantidad = 0
     var sudadera_cantidad = 0
+    var currentuser = FirebaseAuth.getInstance().currentUser!!.uid
 
     private var mMessageReference: DatabaseReference? = null
 // ...
@@ -104,6 +106,7 @@ class Feed : AppCompatActivity() {
         val constraint_cuaderno = findViewById<ConstraintLayout>(R.id.constraint_libreta) as ConstraintLayout
         val constraint_bufanda = findViewById<ConstraintLayout>(R.id.constraint_bufanda) as ConstraintLayout
 
+        println("CURRENT USER FEED 1:"+currentuser)
 
 
         search_editText!!.setOnClickListener { startActivity(Intent(this@Feed, Search::class.java)) }
@@ -120,9 +123,9 @@ class Feed : AppCompatActivity() {
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
-            count++
             playeras_cantidad++
+            mDatabase!!.child(currentuser.toString()).child("Playera").setValue(playeras_cantidad )
+            count++
             constraint_playera.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_playera=true
             println("borde verde playera click = " + borde_verde_playera)
@@ -137,7 +140,7 @@ class Feed : AppCompatActivity() {
             ++cartCount
             peluches_cantidad++
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
+            mDatabase!!.child(currentuser.toString()).child("Peluche").setValue(peluches_cantidad )
             count++
             constraint_peluche.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_peluche=true
@@ -152,9 +155,9 @@ class Feed : AppCompatActivity() {
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
-            count++
             gorras_cantidad++
+            mDatabase!!.child(currentuser.toString()).child("Gorra").setValue(gorras_cantidad )
+            count++
             constraint_gorra.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_gorra=true
 
@@ -168,9 +171,10 @@ class Feed : AppCompatActivity() {
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
-            count++
             termo_cantidad++
+
+            mDatabase!!.child(currentuser.toString()).child("Termo").setValue(termo_cantidad )
+            count++
             constraint_termo.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_termo=true
 
@@ -184,9 +188,10 @@ class Feed : AppCompatActivity() {
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
-            count++
             bufanda_cantidad++
+
+            mDatabase!!.child(currentuser.toString()).child("Bufanda").setValue(bufanda_cantidad )
+            count++
             constraint_bufanda.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_bufanda=true
 
@@ -200,9 +205,10 @@ class Feed : AppCompatActivity() {
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
-            count++
             sudadera_cantidad++
+
+            mDatabase!!.child(currentuser.toString()).child("Sudadera").setValue(sudadera_cantidad )
+            count++
             constraint_sudadera.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_sudadera=true
 
@@ -216,9 +222,10 @@ class Feed : AppCompatActivity() {
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
-            count++
             mochila_cantidad++
+
+            mDatabase!!.child(currentuser.toString()).child("Mochila").setValue(mochila_cantidad )
+            count++
             constraint_mochila.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_mochila=true
 
@@ -232,9 +239,10 @@ class Feed : AppCompatActivity() {
             Toast.makeText(this@Feed,"Testing",Toast.LENGTH_SHORT).show()*/
             ++cartCount
             CartCounterActionView.setCountStep(this, 1)
-            mDatabase!!.child("Testing").child("Ha comprado").setValue(count )
-            count++
             cuadernos_cantidad++
+
+            mDatabase!!.child(currentuser.toString()).child("Cuaderno").setValue(cuadernos_cantidad )
+            count++
             constraint_libreta.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_cuaderno=true
 
@@ -250,6 +258,8 @@ class Feed : AppCompatActivity() {
                 println("borde verde playera 2 = " + borde_verde_playera)
                 --cartCount
                 playeras_cantidad--
+                mDatabase!!.child(currentuser.toString()).child("Playera").setValue(playeras_cantidad )
+
                 CartCounterActionView.setCountStep(this, -1)
                 if(playeras_cantidad==0) {
                     constraint_playera.setBackgroundResource(R.drawable.borde_gris)
@@ -263,6 +273,8 @@ class Feed : AppCompatActivity() {
             if(borde_verde_peluche==true) {
                 peluches_cantidad--
                 --cartCount
+                mDatabase!!.child(currentuser.toString()).child("Peluche").setValue(peluches_cantidad )
+
                 CartCounterActionView.setCountStep(this, -1)
                 if(peluches_cantidad==0) {
                     constraint_peluche.setBackgroundResource(R.drawable.borde_gris)
@@ -275,6 +287,8 @@ class Feed : AppCompatActivity() {
             if(borde_verde_gorra==true) {
                 gorras_cantidad--
                 --cartCount
+                mDatabase!!.child(currentuser.toString()).child("Gorra").setValue(gorras_cantidad )
+
                 CartCounterActionView.setCountStep(this, -1)
                 if(gorras_cantidad==0) {
                     constraint_gorra.setBackgroundResource(R.drawable.borde_gris)
@@ -288,6 +302,8 @@ class Feed : AppCompatActivity() {
 
                 termo_cantidad--
                 --cartCount
+                mDatabase!!.child(currentuser.toString()).child("Termo").setValue(termo_cantidad )
+
                 CartCounterActionView.setCountStep(this, -1)
                 if(termo_cantidad==0) {
                     constraint_termo.setBackgroundResource(R.drawable.borde_gris)
@@ -301,6 +317,8 @@ class Feed : AppCompatActivity() {
 
                 bufanda_cantidad--
                 --cartCount
+                mDatabase!!.child(currentuser.toString()).child("Bufanda").setValue(bufanda_cantidad )
+
                 CartCounterActionView.setCountStep(this, -1)
                 if(bufanda_cantidad==0) {
                     constraint_bufanda.setBackgroundResource(R.drawable.borde_gris)
@@ -314,6 +332,8 @@ class Feed : AppCompatActivity() {
 
                 sudadera_cantidad--
                 --cartCount
+                mDatabase!!.child(currentuser.toString()).child("Sudadera").setValue(sudadera_cantidad )
+
                 CartCounterActionView.setCountStep(this, -1)
                 if(sudadera_cantidad==0) {
                     constraint_sudadera.setBackgroundResource(R.drawable.borde_gris)
@@ -326,6 +346,8 @@ class Feed : AppCompatActivity() {
             if(borde_verde_mochila==true) {
 
                 mochila_cantidad--
+                mDatabase!!.child(currentuser.toString()).child("Mochila").setValue(mochila_cantidad )
+
                 constraint_mochila.setBackgroundResource(R.drawable.borde_gris)
                 --cartCount
                 CartCounterActionView.setCountStep(this, -1)
@@ -340,6 +362,8 @@ class Feed : AppCompatActivity() {
             if(borde_verde_cuaderno==true) {
                 cuadernos_cantidad--
                 --cartCount
+                mDatabase!!.child(currentuser.toString()).child("Cuaderno").setValue(cuadernos_cantidad )
+
                 CartCounterActionView.setCountStep(this, -1)
                 if(cuadernos_cantidad==0) {
                     constraint_libreta.setBackgroundResource(R.drawable.borde_gris)

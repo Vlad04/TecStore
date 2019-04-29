@@ -12,7 +12,7 @@
             <stroke
                 android:dashWidth="10px"
                 android:width="5.5dp"
-                android:color="#D6D6D6  " />
+                android:color="#00ffffff  " />
         </shape>
     </item>
 

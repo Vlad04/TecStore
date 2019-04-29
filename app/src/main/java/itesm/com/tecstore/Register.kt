@@ -19,6 +19,11 @@ import itesm.com.tecstore.MainActivity
 import itesm.com.tecstore.ResetPasswordActivity
 
 import itesm.com.tecstore.R.id.sign_up_button
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.FirebaseDatabase
+
+
 
 class Register : AppCompatActivity() {
 
@@ -27,14 +32,22 @@ class Register : AppCompatActivity() {
     private var btnSignUp: Button? = null
     private var btnResetPassword: Button? = null
     private var progressBar: ProgressBar? = null
-    private var auth: FirebaseAuth? = null
+    private lateinit var auth: FirebaseAuth
+    private val mAuth: FirebaseAuth? = null
+    private var mMessageReference: DatabaseReference? = null
+    private var mDatabase: DatabaseReference? = null
+    var currentFirebaseUser = FirebaseAuth.getInstance().currentUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
+        mDatabase = FirebaseDatabase.getInstance().reference
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance()
+        var currentuser = FirebaseAuth.getInstance().currentUser!!.uid
+
+        println("AUTH 1:"+auth)
+        println("CURRENT USER 1:"+currentuser)
 
         btnSignUp = findViewById<Button>(R.id.sign_up_button) as Button
         inputEmail = findViewById<EditText>(R.id.email) as EditText
@@ -66,7 +79,7 @@ class Register : AppCompatActivity() {
 
             progressBar!!.visibility = View.VISIBLE
             //create user
-            auth!!.createUserWithEmailAndPassword(email, password)
+            auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this@Register) { task ->
                         progressBar!!.visibility = View.GONE
                         // If sign in fails, display a message to the user. If sign in succeeds
@@ -74,7 +87,10 @@ class Register : AppCompatActivity() {
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful) {
                         } else {
-                            startActivity(Intent(this@Register, MainActivity::class.java))
+                            println("AUTH 2:"+auth)
+                            println("CURRENT USER 2:"+currentuser)
+
+                            startActivity(Intent(this@Register, Feed::class.java))
                             finish()
                         }
                     }
