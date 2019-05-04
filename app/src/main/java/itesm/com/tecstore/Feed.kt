@@ -108,6 +108,16 @@ class Feed : AppCompatActivity() {
 
         println("CURRENT USER FEED 1:"+currentuser)
 
+        try {
+            var bundle: Bundle? = intent.extras
+            var message = bundle!!.getString("value") // 1
+            var strUser: String = intent.getStringExtra("value") // 2
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        }catch (e:Exception)
+        {
+
+            println("ERROR TRATANDO DE HACER GET EXTRA")
+        }
 
         search_editText!!.setOnClickListener { startActivity(Intent(this@Feed, Search::class.java)) }
 

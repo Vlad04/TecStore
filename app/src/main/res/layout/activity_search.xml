@@ -65,7 +65,7 @@
 
     <ListView
         android:id="@+id/theList"
-        android:background="@color/colorblack"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"></ListView>

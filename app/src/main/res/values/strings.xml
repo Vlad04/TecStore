@@ -69,4 +69,9 @@
     <string name="feed">FEED</string>
     <string name="activity">ACTIVITY</string>
     <string name="settings">SETTINGS</string>
+
+    <string name="ropa">Clothe</string>
+    <string name="escuela">School</string>
+    <string name="regalos">Gifts</string>
+    <string name="tecnologia">Technology</string>
 </resources>

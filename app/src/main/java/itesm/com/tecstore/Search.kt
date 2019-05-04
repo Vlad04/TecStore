@@ -18,13 +18,19 @@ import android.text.TextWatcher
 import android.R.attr.data
 import android.R.attr.data
 import kotlinx.android.synthetic.main.activity_search.*
+import com.google.android.gms.internal.lv
+import android.R.layout.list_content
+import android.widget.TextView
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
+
+
 
 class Search : AppCompatActivity() {
     var count=0
     private val TAG = "MainActivity"
     private var mDatabase: DatabaseReference? = null
-    var adapter1: ArrayAdapter<String>? = null
-    val data = arrayOf("Mochila", "Peluche", "Audifonos", "Playera", "Gorra", "Termo", "Bufanda", "Libreta")
+    var adapter1: ArrayAdapter<Any>? = null
 
     private var mMessageReference: DatabaseReference? = null
 // ...
@@ -47,28 +53,62 @@ class Search : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val data = arrayOf(applicationContext.getString(R.string.ropa),applicationContext.getString(R.string.escuela),applicationContext.getString(R.string.gifts),applicationContext.getString(R.string.sports),applicationContext.getString(R.string.tecnologia))
+
         setContentView(R.layout.activity_search)
         val list = findViewById<View>(R.id.theList) as ListView
         adapter1 = ArrayAdapter(this@Search, android.R.layout.simple_list_item_1, data)
         list.setAdapter(adapter1);
         list.setTextFilterEnabled(true);
 
+        theList.setOnItemClickListener(OnItemClickListener { parent, view, position, id ->
+            val selectedFromList = theList.getItemAtPosition(position)
+            val intent = Intent(this@Search, Feed::class.java)
+            intent.putExtra("article", selectedFromList.toString())
+            startActivity(intent)
+
+            println("Chosen item = : " + selectedFromList.toString())
+        })
+
+
         search_editText_activity.addTextChangedListener(object : TextWatcher {
 
             override fun onTextChanged(arg0: CharSequence, arg1: Int, arg2: Int, arg3: Int) {
                 // TODO Auto-generated method stub
                 this@Search.adapter1!!.getFilter().filter(arg0)
+
+                theList.setOnItemClickListener(OnItemClickListener { parent, view, position, id ->
+                    val selectedFromList = theList.getItemAtPosition(position)
+                    val intent = Intent(this@Search, Feed::class.java)
+                    intent.putExtra("article", selectedFromList.toString())
+                    startActivity(intent)
+
+                    println("Chosen item = : " + selectedFromList.toString())
+                })
+
             }
 
             override fun beforeTextChanged(arg0: CharSequence, arg1: Int, arg2: Int,
                                            arg3: Int) {
-                // TODO Auto-generated method stub
+                theList.setOnItemClickListener(OnItemClickListener { parent, view, position, id ->
+                    val selectedFromList = theList.getItemAtPosition(position)
+                    val intent = Intent(this@Search, Feed::class.java)
+                    intent.putExtra("article", selectedFromList.toString())
+                    startActivity(intent)
 
+                    println("Chosen item = : " + selectedFromList.toString())
+                })
             }
 
             override fun afterTextChanged(arg0: Editable) {
-                // TODO Auto-generated method stub
+                theList.setOnItemClickListener(OnItemClickListener { parent, view, position, id ->
+                    val selectedFromList = theList.getItemAtPosition(position)
+                    val intent = Intent(this@Search, Feed::class.java)
+                    intent.putExtra("article", selectedFromList.toString())
+                    startActivity(intent)
 
+                    println("Chosen item = : " + selectedFromList.toString())
+                })
             }
         })
 

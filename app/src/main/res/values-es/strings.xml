@@ -60,4 +60,8 @@
     <string name="privacy">Privacidad</string>
     <string name="logout">Cerrar sesión</string>
 
+    <string name="ropa">Ropa</string>
+    <string name="escuela">Escuela</string>
+    <string name="regalos">Regalos</string>
+    <string name="tecnologia">Tecnología</string>
 </resources>
