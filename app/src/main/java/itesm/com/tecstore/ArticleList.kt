@@ -87,10 +87,10 @@ class ArticleList : AppCompatActivity(), BillingProcessor.IBillingHandler {
         simpleList = findViewById<ListView>(R.id.userlist) as ListView
         bp = BillingProcessor(this, null, this)
 
-        button2.setOnClickListener {
+        /*button2.setOnClickListener {
             bp!!.purchase(this@ArticleList, "android.test.refunded")
             println("BILLING PROCESS= "+bp)
-        }
+        }*/
 
     }
 
