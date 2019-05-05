@@ -114,6 +114,7 @@ class Search : AppCompatActivity() {
 
 
         search_editText_activity.setOnClickListener {
+            search_editText_activity.hint=""
             list.visibility=View.VISIBLE
         }
 

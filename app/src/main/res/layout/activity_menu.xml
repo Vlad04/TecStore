@@ -256,7 +256,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/bags"
+                    android:text="@string/sports"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout38"
@@ -274,7 +274,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/bag" />
+                    app:srcCompat="@drawable/sports" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/constraintLayout38"
@@ -306,7 +306,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
-                    android:text="@string/books"
+                    android:text="@string/escuela"
                     android:textColor="#4a4a4a"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@+id/constraintLayout40"

@@ -8,6 +8,7 @@ import android.view.Menu
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_feed.*
 import android.view.MenuItem
+import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.rowland.cartcounter.view.CartCounterActionView
@@ -110,16 +111,61 @@ class Feed : AppCompatActivity() {
 
         try {
             var bundle: Bundle? = intent.extras
-            var message = bundle!!.getString("value") // 1
-            var strUser: String = intent.getStringExtra("value") // 2
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+            var message = bundle!!.getString("article") // 1
+            var strUser: String = intent.getStringExtra("article") // 2
+
+            if(message==applicationContext.getString(R.string.ropa))
+            {
+                first_article.visibility = View.VISIBLE
+                second_article.visibility = View.GONE
+                third_article.visibility = View.VISIBLE
+                fourth_article.visibility = View.GONE
+                fifth_article.visibility = View.VISIBLE
+                sixth_article.visibility = View.VISIBLE
+                seventh_article.visibility = View.GONE
+                eigth_article.visibility = View.GONE
+            }
+            else if(message==applicationContext.getString(R.string.escuela)){
+                first_article.visibility = View.GONE
+                second_article.visibility = View.GONE
+                third_article.visibility = View.GONE
+                fourth_article.visibility = View.GONE
+                fifth_article.visibility = View.GONE
+                sixth_article.visibility = View.GONE
+                seventh_article.visibility = View.VISIBLE
+                eigth_article.visibility = View.VISIBLE
+
+            }
+            else if(message==applicationContext.getString(R.string.regalos)) {
+                first_article.visibility = View.GONE
+                second_article.visibility = View.VISIBLE
+                third_article.visibility = View.GONE
+                fourth_article.visibility = View.GONE
+                fifth_article.visibility = View.GONE
+                sixth_article.visibility = View.GONE
+                seventh_article.visibility = View.GONE
+                eigth_article.visibility = View.GONE
+            }
+            else if(message==applicationContext.getString(R.string.sports)) {
+                first_article.visibility = View.GONE
+                second_article.visibility = View.GONE
+                third_article.visibility = View.GONE
+                fourth_article.visibility = View.VISIBLE
+                fifth_article.visibility = View.GONE
+                sixth_article.visibility = View.GONE
+                seventh_article.visibility = View.GONE
+                eigth_article.visibility = View.GONE
+            }
+
         }catch (e:Exception)
         {
 
             println("ERROR TRATANDO DE HACER GET EXTRA")
         }
 
-        search_editText!!.setOnClickListener { startActivity(Intent(this@Feed, Search::class.java)) }
+        search_editText!!.setOnClickListener {
+            startActivity(Intent(this@Feed, Search::class.java))
+        }
 
 
 

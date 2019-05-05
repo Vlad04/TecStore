@@ -47,9 +47,10 @@
                     android:backgroundTint="#ffffff"
                     android:textColor="#aaa3a3"
                     android:focusable="true"
+                    android:textColorHint="#aaa3a3"
                     android:background="@drawable/searchable_border"
                     android:paddingStart="15dp"
-                    android:text="@string/hint_search"
+                    android:hint="@string/hint_search"
                     android:maxLines="1"
                     android:paddingLeft="30dp" />
 
