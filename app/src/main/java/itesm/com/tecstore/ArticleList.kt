@@ -18,6 +18,9 @@ import kotlinx.android.synthetic.main.activity_article_list.*
 class ArticleList : AppCompatActivity(), BillingProcessor.IBillingHandler {
     internal var bp: BillingProcessor? = null
     lateinit var textView: TextView
+    private var mDatabase: DatabaseReference? = null
+    var currentuser = FirebaseAuth.getInstance().currentUser!!.uid
+    private var mMessageReference: DatabaseReference? = null
 
     override fun onBillingInitialized() {
     }
@@ -33,7 +36,6 @@ class ArticleList : AppCompatActivity(), BillingProcessor.IBillingHandler {
 
     lateinit var simpleList: ListView
     var ref = FirebaseDatabase.getInstance().reference
-    var currentuser = FirebaseAuth.getInstance().currentUser!!.uid
 
     var descripciones_Ref = FirebaseDatabase.getInstance().getReference("Descripciones")
 
@@ -86,11 +88,22 @@ class ArticleList : AppCompatActivity(), BillingProcessor.IBillingHandler {
         setContentView(R.layout.activity_article_list)
         simpleList = findViewById<ListView>(R.id.userlist) as ListView
         bp = BillingProcessor(this, null, this)
+        mDatabase = FirebaseDatabase.getInstance().reference
 
-        /*button2.setOnClickListener {
+        button2.setOnClickListener {
             bp!!.purchase(this@ArticleList, "android.test.refunded")
             println("BILLING PROCESS= "+bp)
-        }*/
+            mDatabase!!.child(currentuser.toString()).child("Playera").setValue(0)
+            mDatabase!!.child(currentuser.toString()).child("Peluche").setValue(0)
+            mDatabase!!.child(currentuser.toString()).child("Gorra").setValue(0)
+            mDatabase!!.child(currentuser.toString()).child("Termo").setValue(0)
+            mDatabase!!.child(currentuser.toString()).child("Bufanda").setValue(0)
+            mDatabase!!.child(currentuser.toString()).child("Sudadera").setValue(0)
+            mDatabase!!.child(currentuser.toString()).child("Mochila").setValue(0)
+            mDatabase!!.child(currentuser.toString()).child("Cuaderno").setValue(0)
+
+            
+        }
 
     }
 

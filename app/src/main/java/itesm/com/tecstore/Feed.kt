@@ -106,6 +106,7 @@ class Feed : AppCompatActivity() {
         val constraint_sudadera = findViewById<ConstraintLayout>(R.id.constraint_sudadera) as ConstraintLayout
         val constraint_cuaderno = findViewById<ConstraintLayout>(R.id.constraint_libreta) as ConstraintLayout
         val constraint_bufanda = findViewById<ConstraintLayout>(R.id.constraint_bufanda) as ConstraintLayout
+        CartCounterActionView.setCountStep(this,0)
 
         println("CURRENT USER FEED 1:"+currentuser)
 
