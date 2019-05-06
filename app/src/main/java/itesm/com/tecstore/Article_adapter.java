@@ -9,16 +9,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.Inflater;
 
 class Article_adapter extends BaseAdapter {
     Context context;
-    String countryList[];
-    int flags[];
-    String descripciones[];
+    List<String> countryList;
+    List<Integer> flags;
+    List<String> descripciones;
     LayoutInflater inflter;
 
-    public Article_adapter(Context applicationContext, String[] countryList, int[] flags, String[] descripciones) {
+    public Article_adapter(Context applicationContext, List<String> countryList, List<Integer>flags, List<String> descripciones) {
         this.context = context;
         this.countryList = countryList;
         this.flags = flags;
@@ -28,7 +30,7 @@ class Article_adapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return countryList.length;
+        return countryList.size();
     }
 
     @Override
@@ -47,9 +49,9 @@ class Article_adapter extends BaseAdapter {
         TextView article = (TextView) view.findViewById(R.id.textView_name);
         ImageView icon = (ImageView) view.findViewById(R.id.imageView_poster);
         TextView descripcion = (TextView)view.findViewById(R.id.descripcion);
-        article.setText(countryList[i]);
-        descripcion.setText(descripciones[i]);
-        icon.setImageResource(flags[i]);
+        article.setText(countryList.get(i));
+        descripcion.setText(descripciones.get(i));
+        icon.setImageResource(flags.get(i));
         return view;
     }
 }

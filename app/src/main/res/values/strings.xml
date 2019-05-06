@@ -74,4 +74,16 @@
     <string name="escuela">School</string>
     <string name="regalos">Gifts</string>
     <string name="tecnologia">Technology</string>
+    <string name="playeras_cantidad_guardada">playera_cantidad</string>
+
+    <string name="Playera">T-shirt</string>
+    <string name="Bufanda">Scarf</string>
+    <string name="Termo">Thermo</string>
+    <string name="Peluche">Teddy</string>
+    <string name="Sudadera">Sweatshirt</string>
+    <string name="Libreta">Notebook</string>
+    <string name="Mochila">Bag</string>
+    <string name="Gorra">Backpack</string>
+
+
 </resources>

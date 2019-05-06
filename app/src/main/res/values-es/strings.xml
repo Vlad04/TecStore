@@ -64,4 +64,16 @@
     <string name="escuela">Escuela</string>
     <string name="regalos">Regalos</string>
     <string name="tecnologia">Tecnología</string>
+    <string name="playeras_cantidad_guardada">playera_cantidad</string>
+
+
+    <string name="Playera">Playera</string>
+    <string name="Bufanda">Bufanda</string>
+    <string name="Termo">Termo</string>
+    <string name="Peluche">Peluche</string>
+    <string name="Sudadera">Sudadera</string>
+    <string name="Libreta">Libreta</string>
+    <string name="Mochila">Mochila</string>
+    <string name="Gorra">Gorra</string>
+
 </resources>
