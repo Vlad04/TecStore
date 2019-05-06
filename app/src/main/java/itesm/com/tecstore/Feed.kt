@@ -187,6 +187,7 @@ class Feed : AppCompatActivity() {
             borde_verde_playera=true
             println("borde verde playera click = " + borde_verde_playera)
 
+            Toast.makeText(this@Feed,"Playeras compradas: "+playeras_cantidad,Toast.LENGTH_SHORT).show()
             retrieveStuffFromDatabase()
         }
 
@@ -201,6 +202,7 @@ class Feed : AppCompatActivity() {
             count++
             constraint_peluche.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_peluche=true
+            Toast.makeText(this@Feed,"Peluches comprados: "+peluches_cantidad,Toast.LENGTH_SHORT).show()
 
 
             retrieveStuffFromDatabase()
@@ -217,6 +219,7 @@ class Feed : AppCompatActivity() {
             count++
             constraint_gorra.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_gorra=true
+            Toast.makeText(this@Feed,"Gorras compradas: "+gorras_cantidad,Toast.LENGTH_SHORT).show()
 
 
             retrieveStuffFromDatabase()
@@ -234,6 +237,7 @@ class Feed : AppCompatActivity() {
             count++
             constraint_termo.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_termo=true
+            Toast.makeText(this@Feed,"Termos comprados: "+termo_cantidad,Toast.LENGTH_SHORT).show()
 
 
             retrieveStuffFromDatabase()
@@ -251,6 +255,7 @@ class Feed : AppCompatActivity() {
             count++
             constraint_bufanda.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_bufanda=true
+            Toast.makeText(this@Feed,"Bufandas compradas: "+bufanda_cantidad,Toast.LENGTH_SHORT).show()
 
 
             retrieveStuffFromDatabase()
@@ -268,6 +273,7 @@ class Feed : AppCompatActivity() {
             count++
             constraint_sudadera.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_sudadera=true
+            Toast.makeText(this@Feed,"Sudaderas compradas: "+sudadera_cantidad,Toast.LENGTH_SHORT).show()
 
 
             retrieveStuffFromDatabase()
@@ -285,6 +291,7 @@ class Feed : AppCompatActivity() {
             count++
             constraint_mochila.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_mochila=true
+            Toast.makeText(this@Feed,"Mochilas compradas: "+mochila_cantidad,Toast.LENGTH_SHORT).show()
 
 
             retrieveStuffFromDatabase()
@@ -302,6 +309,7 @@ class Feed : AppCompatActivity() {
             count++
             constraint_libreta.setBackgroundResource(R.drawable.borde_verde)
             borde_verde_cuaderno=true
+            Toast.makeText(this@Feed,"Cuadernos comprados: "+cuadernos_cantidad,Toast.LENGTH_SHORT).show()
 
 
             retrieveStuffFromDatabase()
@@ -321,6 +329,8 @@ class Feed : AppCompatActivity() {
                 if(playeras_cantidad==0) {
                     constraint_playera.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_playera=false
+                    Toast.makeText(this@Feed,"Playeras comprados: "+playeras_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
 
             }
@@ -336,6 +346,8 @@ class Feed : AppCompatActivity() {
                 if(peluches_cantidad==0) {
                     constraint_peluche.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_peluche=false
+                    Toast.makeText(this@Feed,"Peluches comprados: "+peluches_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
@@ -350,6 +362,8 @@ class Feed : AppCompatActivity() {
                 if(gorras_cantidad==0) {
                     constraint_gorra.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_gorra=false
+                    Toast.makeText(this@Feed,"Gorras compradas: "+gorras_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
@@ -365,6 +379,8 @@ class Feed : AppCompatActivity() {
                 if(termo_cantidad==0) {
                     constraint_termo.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_termo=false
+                    Toast.makeText(this@Feed,"Termos comprados: "+termo_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
@@ -380,6 +396,8 @@ class Feed : AppCompatActivity() {
                 if(bufanda_cantidad==0) {
                     constraint_bufanda.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_bufanda=false
+                    Toast.makeText(this@Feed,"Bufandas compradas: "+bufanda_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
@@ -395,6 +413,8 @@ class Feed : AppCompatActivity() {
                 if(sudadera_cantidad==0) {
                     constraint_sudadera.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_sudadera=false
+                    Toast.makeText(this@Feed,"Sudaderas compradas: "+sudadera_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
@@ -411,6 +431,8 @@ class Feed : AppCompatActivity() {
                 if(mochila_cantidad==0) {
                     constraint_mochila.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_mochila=false
+                    Toast.makeText(this@Feed,"Mochilas compradas: "+mochila_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
@@ -425,6 +447,8 @@ class Feed : AppCompatActivity() {
                 if(cuadernos_cantidad==0) {
                     constraint_libreta.setBackgroundResource(R.drawable.borde_gris)
                     borde_verde_cuaderno=false
+                    Toast.makeText(this@Feed,"Cuadernos comprados: "+cuadernos_cantidad,Toast.LENGTH_SHORT).show()
+
                 }
             }
         }
