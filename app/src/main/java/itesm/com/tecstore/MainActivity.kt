@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(){
 
         val adapter = Page(supportFragmentManager)
         val scale = resources.displayMetrics.density
-        val maxY : Float = -70f * scale
+        val maxY : Float = -65f * scale
         val maxWidth : Int = Image_logo.layoutParams.width
         val maxHeight : Int = Image_logo.layoutParams.height
         val minWidth : Int = (maxWidth * 0.8).toInt()
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity(){
 
                     var actualWidth = (maxWidth * (1 - (positionOffset * 0.2) )).toInt()
                     if(actualWidth > minWidth) {
-                        var actualHeight = (maxHeight * (1.65 - (positionOffset * 0.2) )).toInt()
+                        var actualHeight = (maxHeight * (1.35 - (positionOffset * 0.17) )).toInt()
                         Image_logo.layoutParams.width = actualWidth
                         Image_logo.layoutParams.height = actualHeight
                         Image_logo.requestLayout()
